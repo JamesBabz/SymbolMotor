@@ -1,0 +1,6 @@
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\bin\Release\SymbolMotor.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\bin\Release\SymbolMotor.pdb
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.csprojAssemblyReference.cache
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.csproj.CoreCompileInputs.cache
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.pdb

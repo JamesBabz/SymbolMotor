@@ -1,0 +1,17 @@
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\SymbolMotorTest.deps.json
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\SymbolMotorTest.runtimeconfig.json
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\SymbolMotorTest.runtimeconfig.dev.json
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\SymbolMotorTest.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\SymbolMotorTest.pdb
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\SymbolMotor.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\SymbolMotor.pdb
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.csprojAssemblyReference.cache
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.csproj.CoreCompileInputs.cache
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.AssemblyInfoInputs.cache
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.AssemblyInfo.cs
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.csproj.CopyComplete
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.pdb

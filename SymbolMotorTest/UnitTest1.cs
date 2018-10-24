@@ -49,5 +49,11 @@ namespace SymbolMotorTest
                         word ?? "<null>", result));
             }
         }
+
+        [TestMethod]
+        public void TestTester()
+        {
+            Assert.IsFalse(true);
+        }
     }
 }

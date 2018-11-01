@@ -4,3 +4,7 @@ C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.cspr
 C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.csproj.CoreCompileInputs.cache
 C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.dll
 C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.pdb
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\bin\Release\NolekMoxa.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\bin\Release\NolekMoxa.pdb
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\bin\Release\NolekMoxa.xml
+C:\Users\James\source\repos\SymbolMotor\SymbolMotor\obj\Release\SymbolMotor.csproj.CopyComplete

@@ -16,4 +16,10 @@
     <ProjectReference Include="..\SymbolMotor\SymbolMotor.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="NolekMoxa">
+      <HintPath>..\..\NolekMoxa\NolekMoxa\bin\Debug\NolekMoxa.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NolekMoxa</name>
+    </assembly>
+    <members>
+        <member name="T:NolekMoxa.Comparer">
+            <summary>
+            Class made for comparing objects with eachother e.g. Channel settings on devices
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.Comparer.#ctor">
+            <summary>
+            Creates a new comparer with an errorhandler attached to it
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.Comparer.CompareDeviceLists(System.Collections.Generic.List{NolekMoxa.Model.ConnectedDevice},System.Collections.Generic.List{NolekMoxa.Model.ConnectedDevice})">
+            <summary>
+            Compares all device in a list with another. Useful when getting saved configurations
+            </summary>
+            <param name="newList">The freshly generated list to compare</param>
+            <param name="oldList">The list from a config file to compare against</param>
+            <returns>An array of errors if any</returns>
+        </member>
+        <member name="T:NolekMoxa.ErrorHandler">
+            <summary>
+            For adding errors to a list for later use
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.ErrorHandler.#ctor">
+            <summary>
+            Contstructor
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.ErrorHandler.AddError(System.String)">
+            <summary>
+            Add the specified error string to the error list
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="M:NolekMoxa.ErrorHandler.GetErrors">
+            <summary>
+            Returns the errors
+            </summary>
+            <returns>An array of errors</returns>
+        </member>
+        <member name="T:NolekMoxa.Model.Channel">
+            <summary>
+            A business entity to contain the different IO channels on the device and their type
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.Channel.Type">
+            <summary>
+            The type of the channel e.g DI, DO, Relay
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.Channel.ChannelSettings">
+            <summary>
+            A list of all the possible settings for the channel e.g status: on or off, DIO in or out
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.Model.Channel.#ctor(System.String)">
+            <summary>
+            One of the channels on a given device
+            </summary>
+            <param name="type">The type of channel (di/do etc.)</param>
+        </member>
+        <member name="M:NolekMoxa.Model.Channel.#ctor">
+            <summary>
+            Empty constructor for xml conversion
+            </summary>
+        </member>
+        <member name="T:NolekMoxa.Model.ChannelSetting">
+            <inheritdoc />
+            <summary>
+            The settings of the channel. A custom dictionary containing the setting and the value of that setting
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ChannelSetting.Key">
+            <summary>
+            The name of the setting
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ChannelSetting.Value">
+            <summary>
+            The value of the setting.
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.Model.ChannelSetting.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for the channelsetting with key and value parameters
+            </summary>
+            <param name="k">The identifier (name) of the channel setting</param>
+            <param name="v">The value for the channel setting</param>
+        </member>
+        <member name="M:NolekMoxa.Model.ChannelSetting.#ctor">
+            <summary>
+            Empty constructor for xml conversion
+            </summary>
+        </member>
+        <member name="E:NolekMoxa.Model.ChannelSetting.PropertyChanged">
+            <inheritdoc />
+            <summary>
+            PropertyChanged
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.Model.ChannelSetting.NotifyPropertyChanged(System.String)">
+            <summary>
+            Notify property changed
+            </summary>
+            <param name="prop">property name</param>
+        </member>
+        <member name="T:NolekMoxa.Model.ConnectedDevice">
+            <inheritdoc />
+            <summary>
+            The Connected device (Module)
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ConnectedDevice.Name">
+            <summary>
+            The name of the device. This is not set by default on the device
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ConnectedDevice.Module">
+            <summary>
+            The module Type eg. E1242
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ConnectedDevice.Ip">
+            <summary>
+            the IP-address for the device
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ConnectedDevice.Password">
+            <summary>
+            The password for the device.
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ConnectedDevice.Mac">
+            <summary>
+            The Mac-address in byte array
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ConnectedDevice.Channels">
+            <summary>
+            A List of all the channels on the device
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.ConnectedDevice.FirmwareVersion">
+            <summary>
+            The firware version read from the device
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.Model.ConnectedDevice.#ctor">
+            <summary>
+            Constructor. Initialises channel list
+            </summary>
+        </member>
+        <member name="E:NolekMoxa.Model.ConnectedDevice.PropertyChanged">
+            <inheritdoc />
+            <summary>
+            PropertyChanged
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.Model.ConnectedDevice.NotifyPropertyChanged(System.String)">
+            <summary>
+            Notify property changed
+            </summary>
+            <param name="prop">property name</param>
+        </member>
+        <member name="T:NolekMoxa.NolekMoxa_CS">
+            <summary>
+                A Dll class made for Nolek A/S to be used in conjunction with Moxa IO devices
+            </summary>
+        </member>
+        <member name="F:NolekMoxa.NolekMoxa_CS.ChannelTypes">
+            <summary>
+                An array of known channel types
+            </summary>
+        </member>
+        <member name="F:NolekMoxa.NolekMoxa_CS.ConnectedDevices">
+            <summary>
+                A List of all connected devices
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.#ctor">
+            <summary>
+                Constructor. Runs the MXEIO_Init.
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetNetworkInterfaces">
+            <summary>
+                Returns a list of the currently available networkinterfaces with their name as element(0) in the array and the
+                description as element(1).
+                The name is only usefull for the user whereas the description is the one used for connecting to Moxa IO modules
+            </summary>
+            <returns>A List of string arrays with name as element(0) in the array and the description as element(1)</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.CheckForExistingConfig">
+            <summary>
+                Checks if a config file exists
+            </summary>
+            <returns>True if it exists</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.CompareConfigWithCurrentSettings">
+            <summary>
+                Compares the configfile with the current setup
+            </summary>
+            <returns>string array with errors if any</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.CreateConfigFile">
+            <summary>
+                Creates a config file with the current setup. Overrides any existing file.
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.LoadConfigFileAsDeviceList">
+            <summary>
+                Loads the config file and replaces the current device list with the loaded one
+            </summary>
+            <returns>The new list of connected devices</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetConnectedDevices(System.String)">
+            <summary>
+                Gets a list of all connected devices
+            </summary>
+            <returns>Returns a list of ConnectedDevices</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetNewConnectionToDevice(NolekMoxa.Model.ConnectedDevice)">
+            <summary>
+                Opens up a connection to a device. Use this once per thread you might want to initiate and not inside a loop.
+            </summary>
+            <param name="device">The device you want to connect to</param>
+            <returns>The connection as an int to be used with other methods</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetStatusOfDiChannels(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Int32)">
+            <summary>
+                Gets the statuses (1: on or 0: off) of a specific amount of DI channels starting from di0
+            </summary>
+            <param name="device">The device on which you want the channel statuses</param>
+            <param name="amountOfChannels">
+                The amount of channels to get statuses from. 1 being only di0 and 0 meaning all DI
+                channels
+            </param>
+            <param name="connection">A connection (Use "GetNewConnection" to establish a new connection)</param>
+            <returns>A dictionary where the key is the indexes of the channels and the value is the corresponding status</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetStatusOfAiChannels(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Int32)">
+            <summary>
+                Gets the value of a specific amount of AI channels starting from ai0
+            </summary>
+            <param name="device">The device on which you want the channel values</param>
+            <param name="amountOfChannels">
+                The amount of channels to get statuses from. 1 being only ai0 and 0 meaning all AI
+                channels
+            </param>
+            <param name="connection">A connection (Use "GetNewConnection" to establish a new connection)</param>
+            <returns>A dictionary where the key is the indexes of the channels and the value is the corresponding value</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetStatusOfAiChannels(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Gets the value of a specific amount of AI channels starting from ai0
+            </summary>
+            <param name="device">The device on which you want the channel values</param>
+            <param name="amountOfChannels">
+                The amount of channels to get statuses from. 1 being only ai0 and 0 meaning all AI
+                channels
+            </param>
+            <param name="connection">A connection (Use "GetNewConnection" to establish a new connection)</param>
+            <param name="rawOrScaledValue">Wether to return the value as the raw value(0) or the scaled value(1).</param>
+            <returns>A dictionary where the key is the indexes of the channels and the value is the corresponding value</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetStatusOfChannels(System.String,NolekMoxa.Model.ConnectedDevice,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            The parent method to call the correct method depending on the type given.
+            </summary>
+            <param name="channelType">The type of channel to get</param>
+            <param name="device">The device on which the channels are</param>
+            <param name="amountOfChannels">Amount of channels from 0</param>
+            <param name="connection">A connection to the device</param>
+            <param name="rawOrScaledValue">if the type is AI the this is either 0(raw) or 1(scaled) otherwise its 2</param>
+            <returns>Dictionary with index, value</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetAiRawValueByIndex(System.Int32,System.UInt16[],System.Int32,System.Collections.Generic.List{NolekMoxa.Model.Channel})">
+            <summary>
+            Get the raw value of the AI channels
+            </summary>
+            <param name="ret">The returned request</param>
+            <param name="dwValue">the returned value from the request</param>
+            <param name="amountOfChannels">The amount of channels to return value for</param>
+            <param name="allChannelsOfType">All the AI channels</param>
+            <returns>Dictionary with index, value</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetDiChannelStatusByIndex(System.Int32,System.UInt32,System.Int32,System.Int32,System.Collections.Generic.List{NolekMoxa.Model.Channel})">
+            <summary>
+            Get the status of DI channels
+            </summary>
+            <param name="ret">The returned request</param>
+            <param name="dwValue">the returned value from the request</param>
+            <param name="highestIndexWithOffset">The index of the last DI channel</param>
+            <param name="amountOfChannels">The amount of channels to return value for</param>
+            <param name="allChannelsOfType">All the AI channels</param>
+            <returns>Dictionary with index, value</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetAiScaledValueByIndex(System.Int32,System.Double[],System.Int32,System.Collections.Generic.List{NolekMoxa.Model.Channel})">
+            <summary>
+            Get the scaled value of the AI channels
+            </summary>
+            <param name="ret">The returned request</param>
+            <param name="dwValue">the returned value from the request</param>
+            <param name="amountOfChannels">The amount of channels to return value for</param>
+            <param name="allChannelsOfType">All the AI channels</param>
+            <returns>Dictionary with index, value</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetStatusForRelay(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Boolean)">
+            <summary>
+            Sets the status for one of the relays
+            </summary>
+            <param name="device">The device with the relay to be set</param>
+            <param name="index">The index of the relay to be set</param>
+            <param name="on">True if it should turn on and false if it should turn off</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetStatusForDO(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Boolean)">
+            <summary>
+            Sets the status for one of the DOs
+            </summary>
+            <param name="device">The device with the DO to be set</param>
+            <param name="index">The index of the DO to be set</param>
+            <param name="on">True if it should turn on and false if it should turn off</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetRelayOrDOStatus(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Boolean)">
+            <summary>
+            Sets a relay or DO status (same method for both)
+            </summary>
+            <param name="device">The device with the channel</param>
+            <param name="index">The index of the desired channel</param>
+            <param name="on">on or off?</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetRawForAO(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Int32)">
+            <summary>
+            Sets the raw value for one of the AOs
+            </summary>
+            <param name="device">The device with the AO to be set</param>
+            <param name="index">The index of the AO to be set</param>
+            <param name="value">The value to be set on the AO</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetScaledForAO(NolekMoxa.Model.ConnectedDevice,System.Int32,System.Double)">
+            <summary>
+            Sets the scaled value for one of the AOs
+            </summary>
+            <param name="device">The device with the AO to be set</param>
+            <param name="index">The index of the AO to be set</param>
+            <param name="value">The value to be set on the AO</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetDeviceInfo">
+            <summary>
+            Sets firmware and name of all connected devices
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetValueOfSearchwordInHTTPResponse(System.String,System.String)">
+            <summary>
+            Get value from a JSON string based on key
+            </summary>
+            <param name="response">The entire JSON string</param>
+            <param name="searchword">The key for which to get the value</param>
+            <returns>The value of the given searchword(key)</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetChannelsForDevices">
+            <summary>
+            Set all channels for devices using Moxas RESTApi
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.AddChannelOfTypeWithSettingsToDevice(NolekMoxa.Model.ConnectedDevice,System.String,System.String[])">
+            <summary>
+            Adds a channel to the device and all the current settings for that channel
+            </summary>
+            <param name="device">The device to which you want to add the channel</param>
+            <param name="channelType">The type of channel to add</param>
+            <param name="channelArray">All the settings for the channel</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.ResponseToArray(System.String)">
+            <summary>
+            Converts JSON resposne from a httpRequest to a string array
+            </summary>
+            <param name="response">The JSON string</param>
+            <returns>string array of the response</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetupHTTPClient">
+            <summary>
+            Sets up the HTTPCLient with headers used for the Moxa devices
+            </summary>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetConnectedDevices(System.String)">
+            <summary>
+                Sets the list of connected devices on the given ethernet port.
+                Note this methods takes a description and not a name.
+            </summary>
+            <param name="EthIFName">The first word of the DESCRIPTION of the ethernet port</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SetIPAndMac(System.Int32,System.String,System.Byte[])">
+            <summary>
+            Sets the IP and Mac address for the connected device
+            </summary>
+            <param name="index">index of the connected device in the list</param>
+            <param name="ip">The ip to set</param>
+            <param name="bytMACAddr">The mac address to set as byte array</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.GetModuleType(System.UInt16,System.String)">
+            <summary>
+            Returns the module name of the device
+            </summary>
+            <param name="MID">Info from their device DB</param>
+            <param name="linkDeviceInfo">Info from their device DB</param>
+            <returns>A string value containing the module name</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.SerializeObject``1(``0,System.String)">
+            <summary>
+                Serializes an object.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="serializableObject">The object to serialize</param>
+            <param name="fileName">The name of the file where the serialized object should be saved to</param>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.DeSerializeObject``1(System.String)">
+            <summary>
+                Deserializes an xml file into an object list
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="fileName">The file to desrialize</param>
+            <returns>The deserialized object</returns>
+        </member>
+        <member name="M:NolekMoxa.NolekMoxa_CS.CheckConnection(System.Int32)">
+            <summary>
+                Checks the specified connection. Best used in a loop
+            </summary>
+            <param name="connection">A connection previously established</param>
+            <returns>True if the connection is ok</returns>
+        </member>
+    </members>
+</doc>

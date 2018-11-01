@@ -50,10 +50,6 @@ namespace SymbolMotorTest
             }
         }
 
-        [TestMethod]
-        public void TestTester()
-        {
-            Assert.IsFalse(true);
-        }
+
     }
 }

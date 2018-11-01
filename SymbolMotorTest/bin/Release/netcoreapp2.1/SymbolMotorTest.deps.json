@@ -11,7 +11,8 @@
           "MSTest.TestAdapter": "1.3.2",
           "MSTest.TestFramework": "1.3.2",
           "Microsoft.NET.Test.Sdk": "15.8.0",
-          "SymbolMotor": "1.0.0"
+          "SymbolMotor": "1.0.0",
+          "NolekMoxa": "1.0.0.0"
         },
         "runtime": {
           "SymbolMotorTest.dll": {}
@@ -1018,6 +1019,14 @@
         "runtime": {
           "SymbolMotor.dll": {}
         }
+      },
+      "NolekMoxa/1.0.0.0": {
+        "runtime": {
+          "NolekMoxa.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1519,6 +1528,11 @@
     },
     "SymbolMotor/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NolekMoxa/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

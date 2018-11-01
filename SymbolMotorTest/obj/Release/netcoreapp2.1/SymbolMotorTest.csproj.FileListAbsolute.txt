@@ -15,3 +15,6 @@ C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.
 C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.csproj.CopyComplete
 C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.dll
 C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\obj\Release\netcoreapp2.1\SymbolMotorTest.pdb
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\NolekMoxa.dll
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\NolekMoxa.pdb
+C:\Users\James\source\repos\SymbolMotor\SymbolMotorTest\bin\Release\netcoreapp2.1\NolekMoxa.xml

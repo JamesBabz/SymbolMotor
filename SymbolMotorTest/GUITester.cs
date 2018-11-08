@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NolekMoxa.Model;
 using SymbolMotor.GUICommunication;
-using SymbolMotor.Helpers;
 
 namespace SymbolMotorTest
 {
@@ -16,7 +13,7 @@ namespace SymbolMotorTest
         public void TestReadTagsFromFile()
         {
             var reader = new GUITagReader();
-            var filePath = "C:\\Users\\James\\source\\repos\\Tagliste\\Tagliste\\bin\\Debug\\TestTags";
+            const string filePath = "C:\\Users\\James\\source\\repos\\Tagliste\\Tagliste\\bin\\Debug\\TestTags";
             var tester = reader.ReadTagsFromFile(filePath);
 
             Assert.AreEqual("asd, 456, Bool, 30", string.Join(", ", tester[1]));
@@ -26,7 +23,7 @@ namespace SymbolMotorTest
         public void TestReadTagsFromWrongFile()
         {
             var reader = new GUITagReader();
-            var filePath = "C:\\Users\\James\\source\\repos\\Tagliste\\Tagliste\\bin\\Debug\\wewq";
+            const string filePath = "C:\\Users\\James\\source\\repos\\Tagliste\\Tagliste\\bin\\Debug\\wewq";
             var tester = reader.ReadTagsFromFile(filePath);
 
             Assert.IsNull(tester);
@@ -36,7 +33,7 @@ namespace SymbolMotorTest
         public void TestReadTagsFromEmptyFile()
         {
             var reader = new GUITagReader();
-            var filePath = "C:\\Users\\James\\source\\repos\\Tagliste\\Tagliste\\bin\\Debug\\TestTagsEmpty";
+            const string filePath = "C:\\Users\\James\\source\\repos\\Tagliste\\Tagliste\\bin\\Debug\\TestTagsEmpty";
             var tester = reader.ReadTagsFromFile(filePath);
 
             Assert.AreEqual(0, tester.Count);

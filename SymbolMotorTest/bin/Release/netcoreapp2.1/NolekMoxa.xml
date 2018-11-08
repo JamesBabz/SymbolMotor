@@ -54,6 +54,16 @@
             The type of the channel e.g DI, DO, Relay
             </summary>
         </member>
+        <member name="P:NolekMoxa.Model.Channel.IsInput">
+            <summary>
+            Is this an input(true) or an output(false) channel. Null if type isnt declared
+            </summary>
+        </member>
+        <member name="P:NolekMoxa.Model.Channel.ConnectedTag">
+            <summary>
+            The tag connected in the frontend to this channel
+            </summary>
+        </member>
         <member name="P:NolekMoxa.Model.Channel.ChannelSettings">
             <summary>
             A list of all the possible settings for the channel e.g status: on or off, DIO in or out

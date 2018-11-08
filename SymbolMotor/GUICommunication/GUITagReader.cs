@@ -34,6 +34,7 @@ namespace SymbolMotor.GUICommunication
             var inputTypes = new[] {"ai", "relay", "di"};
             return device.Channels.Where(channel => inputTypes.Any(type => channel.Type.Equals(type))).ToList();
         }
+
         public List<Channel> GetAllOutputChannels(ConnectedDevice device)
         {
             if (device == null) return null;
